@@ -1,0 +1,8 @@
+# The private layer — who you are, scratch space. Never committed.
+.context/
+
+# Secrets never live in a vault.
+.env
+.env.*
+*.key
+*.pem
