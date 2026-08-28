@@ -10,12 +10,12 @@ companies I work with, and how I run the practice. Built on the ARKS pattern
 - **Live engagements** → [`Action/projects/`](Action/projects/) — one living
   doc each. Currently: [site-relaunch](Action/projects/site-relaunch.md).
 - **People** → [`Knowledge/people/`](Knowledge/people/) — one page per
-  person, my current picture, sources cited.
+  person, with my current understanding and cited sources.
 - **Concepts** → [`Knowledge/concepts/`](Knowledge/concepts/) — how I price,
   how I scope, things I've figured out.
 - **Raw material** → [`Records/`](Records/) — an append-only collection of
   dated, write-once Records. Look here for "what was actually said."
-- **Furniture** → [`System/`](System/) — templates, decisions, routines.
+- **System** → [`System/`](System/) — templates, decisions, routines.
 
 ## Where new things go
 

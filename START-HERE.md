@@ -57,7 +57,7 @@ person:
    is already a git repository.
 3. If the human pastes a completed **my ARKS interview** summary, use it:
    confirm it back and go straight to proposing. Otherwise, run the interview
-   in [`prompts/build-my-vault.md`](prompts/build-my-vault.md) if you can read
+   in [`prompts/02-build-my-vault.md`](prompts/02-build-my-vault.md) if you can read
    it, or use the eight embedded questions below. Ask in batches of 2–3, adapt
    your follow-ups, and don't rush.
 4. Propose the structure back **while it is still a paragraph.** Wait for
@@ -104,7 +104,7 @@ and make a deliberate decision before sharing employer or client material."
 
 Then give the person a compact, labeled summary called **my ARKS interview**.
 Tell them to install a file-capable agent using
-[`docs/setup-macos.md`](docs/setup-macos.md), open it in a separate empty
+[`docs/01-setup-macos.md`](docs/01-setup-macos.md), open it in a separate empty
 folder, and paste the summary together with the same link that brought them to
 this `START-HERE.md`.
 

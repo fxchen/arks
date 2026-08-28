@@ -3,7 +3,7 @@
 The whole method in one worked example. On a Tuesday, Casey (the fictional
 consultant whose vault is in [`template/`](../../template/)) has a 40-minute
 call with a client. One event moves through three layers, each with a
-different rule about revision — and the split is the entire idea.
+different rule for revision.
 
 | Stage | File | Revision rule |
 |---:|---|---|
@@ -22,16 +22,16 @@ Read them in order and notice what moved where:
   rule.
 - **The person note separates fact from interpretation** — observed facts
   from the call sit apart from Casey's one-data-point inference that Jordan
-  decides by pre-socializing. It cites the Record in `sources:`, so both the
-  facts and the basis for the inference can be traced. Next month it gets
-  rewritten; the Record it points to never does.
-- **The project doc keeps the momentum** — goal, status, constraints, next
+  may prefer to build support before the formal decision. It cites the Record
+  in `sources:`, so both the facts and the basis for the inference can be
+  traced. Next month it gets rewritten; the Record it points to never does.
+- **The project doc tracks the work** — goal, status, constraints, next
   actions. The proposal is due Friday 7/24; when it goes out, this file
   changes. No second status file is ever created.
-- A side effect worth noticing: the call also updated
+- The same Record also supports the working hypothesis in
   [`Knowledge/concepts/pricing-model.md`](../../template/Knowledge/concepts/pricing-model.md)
-  with a working hypothesis supported by this one call, not a claim of an
-  established pattern. One event can feed several notes, and each cites it.
+  based on this one call, not a claim of an established pattern. One event
+  can feed several notes, and each cites it.
 
 The observation-versus-inference label is deliberate. A person note holds
 inferences *about* someone, so label them as inferences, keep them
@@ -39,8 +39,8 @@ professional and purposeful, and remember that you may be writing about a
 real person who never consented. Write nothing you would be ashamed to show
 them.
 
-Why the never-rewrite rule matters more than it sounds: it prevents the way
-these systems usually rot — ten near-identical status files with no way to
-tell which is current. Point-in-time captures are frozen; ongoing efforts get
-exactly one living document; nothing is ambiguous about which kind a file is,
-because the folder it's in tells you.
+Why the revision split matters: it prevents the way these systems usually rot
+— ten near-identical status files with no way to tell which is current.
+Records stay frozen. Knowledge notes are rewritten in place and cite their
+Records. Each ongoing effort gets exactly one living Action document. The
+folder tells you which rule applies.

@@ -1,12 +1,11 @@
 <!--
-This is a REFERENCE AGENTS.md — a real, working example — deliberately small,
-written for a fictional solo consultant. It's the file
-nobody shows you: what good house rules actually look like.
+This is a reference AGENTS.md: a compact, working example for a fictional
+solo consultant.
 
-Don't keep it as-is. Run the interview prompt at github.com/fxchen/arks
-(prompts/build-my-vault.md) and let it rewrite this file in your words, for
-your work, your tools, and your rules. What should survive the rewrite: every
-section heading below, and the four rules marked (invariant).
+Adapt it rather than copying it unchanged. Run the interview prompt at
+github.com/fxchen/arks (prompts/02-build-my-vault.md) and let it rewrite this file
+in your words, for your work, your tools, and your rules. The rewrite must keep
+every section heading below and the four rules marked (invariant).
 -->
 
 # AGENTS.md — Casey's consulting vault

@@ -54,7 +54,9 @@ rules live inside a vault.
 5. **Synthesis is a loop with one hard checkpoint.** Capture → synthesize →
    act, repeatedly. The checkpoint: the agent shows what it intends to write
    to Knowledge *before* writing it. Records may be filed freely; Knowledge
-   is written with the human in the loop.
+   is written with the human in the loop. In OODA terms (Boyd's
+   observe–orient–decide–act), capture observes, synthesis orients, the
+   checkpoint decides, and Action acts.
 
 ### 2.1 The exception that outranks the rule
 
@@ -151,11 +153,11 @@ formal API; a formal versioned contract can come later.
    human's explicit knowledge and consent.
 
 Any tool meeting the contract can be adopted, swapped, or abandoned without
-touching a single note. Current known-good options: `docs/power-tools.md`.
+touching a single note. Current known-good options: `docs/03-power-tools.md`.
 
 ## 6. Conformance checks
 
-A vault can be audited mechanically. `prompts/health-check.md` phrases these
+A vault can be audited mechanically. `prompts/03-health-check.md` phrases these
 as paste-ready instructions to your agent (the reference vault keeps its own
 copy at `template/System/routines/health-check.md`); any tool may implement
 them against this list. These checks test

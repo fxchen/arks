@@ -30,8 +30,9 @@ problems.
    not alternatives.
 3. **Links.** Resolve every wikilink by recursively matching its filename slug,
    excluding `System/templates/` and `.context/`. For `[[slug|Display]]`, use
-   the slug before the pipe. One match is healthy, multiple matches violate,
-   and zero matches form the healthy to-write queue.
+   the slug before the pipe. One match is valid, multiple matches are
+   violations, and zero matches form the useful queue of notes the vault may
+   need next.
 4. **Frontmatter.** Check Markdown content files in exactly `Records/`,
    `Knowledge/`, `Action/`, `System/decisions/`, and `System/routines/` for
    `updated:` and `tags:` in the required forms. `updated:` must be a real

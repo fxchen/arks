@@ -18,7 +18,7 @@ Working on: [[site-relaunch]], targeting Acme's October trade show.
 
 ## Working inference
 
-**Inference from one data point (the 7/21 call):** decides by pre-socializing.
-Jordan may not green-light in the room; they may take a proposal to their CEO
-and revisit it after the proposal round. Make proposals easy for Jordan to
-forward and defend, then test this inference in future calls.
+**Inference from one data point (the 7/21 call):** Jordan may prefer to build
+support before the formal decision. They may not green-light work in the room;
+instead, they may take a proposal to their CEO first. Make proposals easy for
+Jordan to forward and defend, then test this inference in future calls.

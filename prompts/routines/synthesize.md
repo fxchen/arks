@@ -1,8 +1,7 @@
 # Routine: synthesize
 
-For turning write-once Records into understanding — the step that makes the
-vault compound. Run this routine after capturing, or batch it at the end of a
-week.
+Use this to turn write-once Records into current Knowledge. Run it after a
+capture, or batch it at the end of a week.
 
 ```text
 Synthesize the following Record(s) into Knowledge: [name the Records/ files,
@@ -23,6 +22,6 @@ or say "everything captured since the last synthesis"].
    document only after I explicitly approve that change.
 ```
 
-This is the loop that makes "it already knows" true: write-once Records feed
-Knowledge, Knowledge informs Action, and the one hard checkpoint — approve
-before Knowledge is written — keeps the vault yours rather than the agent's.
+This routine preserves the data flow: write-once Records feed Knowledge, and
+Knowledge informs Action. The approval checkpoint keeps Knowledge changes
+under your control.

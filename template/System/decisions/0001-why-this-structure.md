@@ -16,9 +16,10 @@ zero because nothing persisted anywhere a model could read.
 ## Decision
 
 Adopt the ARKS pattern (github.com/fxchen/arks): four folders split by
-revision rule — append-only `Records/`, overwritable-but-cited `Knowledge/`,
-one-living-doc `Action/`, durable `System/` — with a root `AGENTS.md` the
-agent reads every session, and information flowing one direction only.
+revision rule — append-only `Records/`, `Knowledge/` rewritten in place with
+sources cited, one living document per effort in `Action/`, and durable
+`System/` — with a root `AGENTS.md` the agent reads every session, and
+information flowing one direction only.
 
 ## Consequences
 

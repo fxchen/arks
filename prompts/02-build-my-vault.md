@@ -1,12 +1,15 @@
 # Build my vault
 
 Paste everything in the block below into a fresh agent session (Claude Code,
-Codex, or similar) inside an empty folder. Answer the questions honestly, and
-take your time on the tools question — it's the one that decides how useful
-the whole thing ends up being.
+Codex, or similar) inside an empty folder. Answer the questions honestly. Take
+your time on the tools question — it determines which integrations the vault
+will support.
 
 If you're in a chat assistant without file access, paste it anyway: it will
 run the interview and hand you a summary to bring to an agent later.
+
+The rest of this page is an instruction block for the agent; you can stop
+reading here and paste it whole.
 
 ```text
 You're going to help me build a personal/work knowledge vault using the ARKS
@@ -125,5 +128,5 @@ later. Show me the proposed tree before creating files. Explain the why behind
 structural choices as you go.
 ```
 
-Then stop and remember the doctrine: one real project, one routine, ten notes.
-A scaffold is not a system until something real is living in it.
+Then stop building and start using it: one real project, one routine, ten
+notes. A scaffold is not a system until something real is living in it.

@@ -1,8 +1,8 @@
 # Routine: capture
 
-For filing anything that happened — a meeting, a call, a decision, something
-you were sent. Paste this (or save it as a routine in your own vault and just
-say "capture this").
+Use this to file raw material from a meeting, a call, a decision, or something
+you were sent. Paste it, or save it as a routine in your vault and use the
+command `capture this`.
 
 ```text
 I'm going to give you raw material — notes, a transcript, or a description of
@@ -13,8 +13,8 @@ something that happened. File it as a Record:
    financial, or third-party personal information. Propose redactions to me
    BEFORE the Record is filed, because after filing it is write-once under
    normal operation.
-2. Create Records/YYYY-MM-DD-short-slug.md, dated when the thing HAPPENED
-   (not today, if they differ).
+2. Create Records/YYYY-MM-DD-short-slug.md, dated when the thing HAPPENED,
+   not when you capture it if those dates differ.
 3. Frontmatter: updated:, tags:, and (if it came from somewhere) source:.
 4. Write down what happened, who said what, and what was decided — faithful
    to the material, no interpretation. Wrap every person and concept in
@@ -34,6 +34,6 @@ something that happened. File it as a Record:
 Here's the material:
 ```
 
-One event ends up in one write-once Record. Synthesis — updating what you
-*believe* based on it — is deliberately a separate step with a human checkpoint:
+One event becomes one write-once Record. Synthesis — updating your current
+understanding based on it — remains a separate step with a human checkpoint:
 [`synthesize.md`](synthesize.md).

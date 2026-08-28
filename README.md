@@ -73,17 +73,18 @@ knowledge base like this compounds: you, your work, and the people around you.
 ## Your first afternoon
 
 Five steps, none of which require anything you don't already know. The full
-version with the exact words to say: [`prompts/first-afternoon.md`](prompts/first-afternoon.md).
+version with the exact words to say: [`prompts/01-first-afternoon.md`](prompts/01-first-afternoon.md).
 
 1. Make a GitHub account and one **private** repository.
-2. Install an agent — Claude Code or Codex. Pick one and stop shopping.
+2. Install an agent — Claude Code or Codex. Choose either one; you do not need
+   to compare agents first.
 3. Introduce them: open the agent in an empty folder and ask it to connect the
    folder to your repo.
 4. Put **five real things** in it. Not a system — content. Ugly is fine.
 5. Write the house rules together — or skip straight to the interview below.
 
 **The better path:** don't design your structure; answer questions and let it
-be built around you. Paste [`prompts/build-my-vault.md`](prompts/build-my-vault.md)
+be built around you. Paste [`prompts/02-build-my-vault.md`](prompts/02-build-my-vault.md)
 into a fresh agent session. It interviews you (2–3 questions at a time),
 proposes the structure back *while it's still a paragraph*, then scaffolds
 only what your answers justify.
@@ -110,6 +111,8 @@ Zettelkasten's linked notes, architecture decision records (ADRs), write-once
 logs, and the `AGENTS.md` convention. What ARKS adds is the packaging: four
 folders, one-way flow, revision rules a machine can follow, and provenance,
 stated plainly enough to hand to an assistant.
+The ARKS loop follows John Boyd's OODA loop — observe, orient, decide, act —
+with orient made explicit as synthesis and a human checkpoint before acting.
 
 If you know **PARA**, the overlap is deliberate: PARA sorts work by
 actionability for a human filer, while ARKS also makes explicit what a machine
@@ -119,13 +122,13 @@ may read, write, or never rewrite. If you use an agent with a single
 provenance.
 
 Databases and memory products solve adjacent problems. ARKS deliberately
-isn't one: plain Markdown in a git repo is legible to you, portable to every
-future tool, and not locked to one vendor.
+isn't one: plain Markdown in a git repo is legible to you, usable by many
+tools, and not locked to one vendor.
 
 ## The things people worry about
 
-**I can't code.** Fine — genuinely. The agent writes and runs whatever code is
-involved. Your contribution is judgment, not syntax.
+**I can't code.** You do not need to. The agent writes and runs whatever code
+is involved. Your contribution is judgment, not syntax.
 
 **What if the agent ruins something?** Commit before anything ambitious, and
 any committed version can be restored exactly. That habit makes your FILES
@@ -143,11 +146,11 @@ live in a separate repo you open only when you need it.
 
 **How is this different from Notion or Obsidian?** Agents work natively on
 plain files; the history of committed files is exact; nothing is trapped in a
-format. Obsidian isn't either/or — it sits happily on top of the same folder.
+proprietary app format. Obsidian can use the same folder.
 
-**Won't this be obsolete in a year?** The tools, probably. Your files, no.
-Markdown in git outlives every app — you're deliberately building the one
-part that survives.
+**Won't this be obsolete in a year?** The tools, probably. Your files are less
+exposed to that churn. Markdown in git is not tied to any one app — you're
+deliberately building the portable part.
 
 **How much git must I learn?** Four words: commit, push, pull, revert. The
 agent does all of them for you.
@@ -158,6 +161,6 @@ MIT. Fork freely; build your own; give it away.
 
 ---
 
-*The tools take an afternoon. The ARKS takes a habit. Only one of them is
-worth anything in a year — so start putting things in files this week, badly,
-and let the shape emerge.*
+*The tools take an afternoon. The ARKS takes a habit. Bet on the habit to
+matter in a year — so start putting things in files this week, badly, and let
+the shape emerge.*

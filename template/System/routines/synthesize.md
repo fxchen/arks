@@ -5,7 +5,7 @@ tags: [routine]
 
 # Routine: synthesize
 
-**Trigger:** "synthesize" — after a capture, or batched weekly.
+**Trigger:** "synthesize" — after a capture, or batched at the end of a week.
 
 **Steps:**
 

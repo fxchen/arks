@@ -1,7 +1,10 @@
 # Vault health check
 
-Paste this into your agent inside your vault. It is a self-contained weekly
-check using real commands and clear rules, so drift gets caught early.
+Paste this into your agent inside your vault. This self-contained weekly check
+uses real commands and clear rules to catch drift early.
+
+The block below is written for the agent; you can stop reading here and paste
+it whole.
 
 ```text
 Audit this vault using the five checks below. Run each check as written, then
@@ -81,5 +84,5 @@ check, never a blanket. Creating or updating that list also needs my approval.
 - A **Knowledge note with no source list** is a conclusion that can't be
   traced. Ask the agent to find the Record it came from; every Knowledge note
   still needs a nonempty `sources:` frontmatter list.
-- A long **QUEUE list** is healthy. It's the vault telling you what to write
-  next, not something to suppress.
+- A long **QUEUE list** is useful. It shows what the vault may need next; do
+  not suppress it.

@@ -4,7 +4,7 @@
 to go stale — the method doesn't depend on any of it. Before adopting
 anything here, read the engine contract in [`SPEC.md`](../SPEC.md) §5.*
 
-## Search engines (Tier 1+, when [`search.md`](search.md) says so)
+## Search engines (Tier 1+, when [`02-search.md`](02-search.md) says so)
 
 - **kb** ([github.com/hraness/kb](https://github.com/hraness/kb), MIT) — a
   knowledge-base CLI whose philosophy closely matches ARKS: Markdown and git
@@ -25,6 +25,16 @@ anything here, read the engine contract in [`SPEC.md`](../SPEC.md) §5.*
 - **Obsidian** — a pleasant editor that sits directly on top of the same
   folder; renders your `[[wikilinks]]` as a clickable graph. Not either/or
   with anything here: the agent works the files, Obsidian displays them.
+  If you are comfortable working from the terminal, Obsidian's
+  [official CLI](https://help.obsidian.md) shipped in v1.12 (early access in
+  February 2026) and has been free for all users since v1.12.4 (late February
+  2026). Enable it inside the app at **Settings → General → Command line
+  interface**. It drives the running desktop app, so Obsidian must be open and
+  the CLI is desktop-only. It covers notes, search, tags, properties, and more
+  from the terminal, giving both you and your agent a way to work against the
+  vault. Some commands open or drive the app UI, which can hang an unattended
+  agent session. Have your agent prefer read-only commands and test them
+  interactively before adding any to a routine.
 
 ## What's deliberately absent
 
