@@ -111,7 +111,16 @@ later without being pointed at it.
   matches are ambiguous, which is a violation; zero matches form a healthy
   queue of what to write next. Alias syntax such as
   `[[jordan-at-acme|Jordan]]` resolves by the slug before the pipe. Do not
-  suppress a link because its target does not exist yet.
+  suppress a link because its target does not exist yet. Wikilinks inside
+  inline code spans or fenced code blocks are syntax examples, not links;
+  resolution ignores them.
+- **Renames.** A rename changes a slug, so update every reference in the same
+  change. Knowledge and Action slugs may be renamed when understanding of the
+  name improves: rename the file and update its references. There is no alias
+  registry; the display text in `[[slug|Display]]` is the only aliasing. A
+  Record may be renamed only to correct a filing error — a wrong date prefix
+  or wrong slug. Its content stays untouched, and the correction is noted in
+  a one-line new Record, because renames are visible to the history check.
 - **The private layer.** `.context/` is gitignored: `me.md` (who the vault's
   person is, for the agent's benefit) and scratch space. `System/` is durable
   shared infrastructure; `.context/` is private per-person state.
@@ -153,7 +162,7 @@ formal API; a formal versioned contract can come later.
    human's explicit knowledge and consent.
 
 Any tool meeting the contract can be adopted, swapped, or abandoned without
-touching a single note. Current known-good options: `docs/03-power-tools.md`.
+touching a single note. Current known-good options: `docs/05-power-tools.md`.
 
 ## 6. Conformance checks
 
@@ -173,9 +182,11 @@ exception binds to one file and one check; it can never be a blanket.
    `git log --name-only --diff-filter=MDR -- Records/`. If the repository has
    no commits yet, report this history check as not applicable. Otherwise, M
    is a violation unless it is an accepted privacy redaction. Every D or R
-   must be explained: deletion is legitimate only as a privacy redaction, and
-   a rename breaks links. Also run `git status --porcelain Records/` for
-   uncommitted M entries on tracked Records. Untracked new Records are fine.
+   must be explained: deletion is legitimate only as a privacy redaction. An
+   R is legitimate only as a filing-error correction with references updated
+   (check 3 confirms) or as an accepted exception; otherwise it is a
+   violation. Also run `git status --porcelain Records/` for uncommitted M
+   entries on tracked Records. Untracked new Records are fine.
 2. **Provenance:** every Knowledge note has a nonempty `sources:` YAML
    frontmatter list naming `Records/` file slugs. Prose and inline citations
    are not alternatives.
@@ -183,7 +194,8 @@ exception binds to one file and one check; it can never be a blanket.
    against Markdown filename slugs across the vault, excluding
    `System/templates/` and `.context/`. One match resolves, multiple matches
    violate, and zero matches are reported as a healthy queue. For
-   `[[slug|Display Text]]`, match `slug`.
+   `[[slug|Display Text]]`, match `slug`. Wikilinks inside inline code spans or
+   fenced code blocks are syntax examples, not links; resolution ignores them.
 4. **Frontmatter:** check Markdown content files in exactly `Records/`,
    `Knowledge/`, `Action/`, `System/decisions/`, and `System/routines/` for
    `updated:` and `tags:` in the forms §3 defines; `updated:` must be a real

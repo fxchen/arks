@@ -23,7 +23,9 @@ briefly as already accepted instead.
    If the repository has no commits yet, report the history command as not
    applicable. Otherwise, in committed history, M is a violation unless it is
    an accepted privacy redaction. Explain every D or R: deletion is legitimate
-   only as a privacy redaction, and a rename breaks links. Use the status
+   only as a privacy redaction. Treat an R as legitimate only when it corrects
+   a filing error and all references are updated (check 3 confirms), or when it
+   is an accepted exception; otherwise report it as a violation. Use the status
    command to find uncommitted M entries for already tracked Records. Untracked
    new Records are fine. Never recommend restoring sensitive material removed
    by a privacy redaction.
@@ -34,7 +36,9 @@ briefly as already accepted instead.
 
 3. LINKS. Collect every [[wikilink]] in the vault, excluding System/templates/
    and .context/. Resolve each link by recursively matching the filename slug;
-   for [[slug|Display]], use the slug before the pipe. Report three lists:
+   for [[slug|Display]], use the slug before the pipe. Ignore wikilinks inside
+   backticks or fenced code blocks — those are syntax examples. Report three
+   lists:
    - AMBIGUOUS — links that resolve to more than one file. This is a violation.
    - QUEUE — links that resolve to no file. This is not an error; it is a useful
      list of what the vault may need next.
@@ -79,8 +83,9 @@ check, never a blanket. Creating or updating that list also needs my approval.
   the new information in a new dated Record, and update the Knowledge note
   instead. A deliberate privacy redaction is different: accept and document
   it, and never restore removed sensitive material. Explain deletions and
-  renames too; deletion is only legitimate for privacy, and a rename breaks
-  links.
+  renames too; deletion is only legitimate for privacy. A Record rename is
+  legitimate only to correct a filing error with all references updated, or
+  as an accepted exception; otherwise it is a violation.
 - A **Knowledge note with no source list** is a conclusion that can't be
   traced. Ask the agent to find the Record it came from; every Knowledge note
   still needs a nonempty `sources:` frontmatter list.

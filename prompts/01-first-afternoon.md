@@ -2,9 +2,10 @@
 
 These five steps ask you to choose the content and approve changes. The agent
 handles the command-line and Git mechanics.
-If you get stuck on step 1 or 2,
-[`../docs/01-setup-macos.md`](../docs/01-setup-macos.md) walks through them step by
-step.
+If you get stuck on step 1 or 2, use
+[`../docs/01-setup-macos.md`](../docs/01-setup-macos.md) on a Mac or
+[`../docs/02-setup-windows.md`](../docs/02-setup-windows.md) on Windows. Each
+walks through them step by step.
 
 Before pasting an error anywhere, remove anything that looks like a password,
 token, one-time code, long random string, or personal detail. If you're unsure,
@@ -23,6 +24,10 @@ ask the agent what to strip before you paste it.
 
    > "Set this folder up as a git repository, connect it to my GitHub repo at
    > [paste the link], and help me sign in when GitHub asks."
+
+   The agent will check what name your save history is written under — on a
+   hand-me-down or family computer it may be someone else's, and it should be
+   yours.
 
    Expect a login step. Errors here are normal — use the redaction rule above,
    then paste them back to the agent.
@@ -44,7 +49,8 @@ ask the agent what to strip before you paste it.
    > anything."
 
    If you use Claude Code, also ask for a `CLAUDE.md` containing only
-   `@AGENTS.md`. Read the draft. Change what's wrong. Once approved, those
+   `@AGENTS.md`. Read the draft. Change what's wrong. The rules take effect
+   when you say they are right — say so in so many words. Once approved, those
    rules govern your ARKS. Ask the agent to commit them with your five real
    things, then explicitly approve the push. Open the repository page and
    confirm that the files arrived. The backup is verified only when you can

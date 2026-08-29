@@ -22,17 +22,21 @@ problems.
    `git status --porcelain Records/`. If there are no commits yet, report the
    history check as not applicable. Otherwise, committed M is a violation
    unless it is an accepted privacy redaction. Explain every D or R: deletion
-   is legitimate only as a privacy redaction, and a rename breaks links. Use
-   status to find uncommitted M entries for tracked Records. Untracked new
-   Records are fine; never recommend restoring redacted sensitive material.
+   is legitimate only as a privacy redaction. Treat an R as legitimate only
+   when it corrects a filing error and all references are updated (check 3
+   confirms), or when it is an accepted exception; otherwise report it as a
+   violation. Use status to find uncommitted M entries for tracked Records.
+   Untracked new Records are fine; never recommend restoring redacted
+   sensitive material.
 2. **Provenance.** Every Knowledge note needs a nonempty `sources:` YAML
    frontmatter list naming Record file slugs. Prose and inline citations are
    not alternatives.
 3. **Links.** Resolve every wikilink by recursively matching its filename slug,
    excluding `System/templates/` and `.context/`. For `[[slug|Display]]`, use
-   the slug before the pipe. One match is valid, multiple matches are
-   violations, and zero matches form the useful queue of notes the vault may
-   need next.
+   the slug before the pipe. Ignore wikilinks inside backticks or fenced code
+   blocks — those are syntax examples. One match is valid, multiple matches
+   are violations, and zero matches form the useful queue of notes the vault
+   may need next.
 4. **Frontmatter.** Check Markdown content files in exactly `Records/`,
    `Knowledge/`, `Action/`, `System/decisions/`, and `System/routines/` for
    `updated:` and `tags:` in the required forms. `updated:` must be a real

@@ -54,7 +54,11 @@ person:
 1. Ask where the vault should live. Offer a sensible default: a new folder in
    their home directory.
 2. Create that folder and run `git init` inside it, or confirm that the folder
-   is already a git repository.
+   is already a git repository. Check `git config user.name` and
+   `git config user.email`. On a machine set up by someone else, they may
+   belong to someone else. Before the first commit, ask whose name the vault's
+   history should carry, and set the correct values for this repository if
+   either is wrong or unset.
 3. If the human pastes a completed **my ARKS interview** summary, use it:
    confirm it back and go straight to proposing. Otherwise, run the interview
    in [`prompts/02-build-my-vault.md`](prompts/02-build-my-vault.md) if you can read
@@ -64,7 +68,8 @@ person:
    corrections before building anything.
 5. Scaffold only what their answers justify. Copy nothing from this repository
    they don't need. Write their `AGENTS.md` in their words, including the
-   safety boundary above.
+   safety boundary above. Ask for their explicit yes on the draft. Until they
+   give it, it is a draft; do not describe it as approved.
 6. Have the person put five real things in — a meeting that mattered, a
    decision with its reasoning, a process they repeat. Ugly is fine.
 7. Commit the scaffold and those first real files.
@@ -76,9 +81,10 @@ person:
    token, one-time code, long random string, or personal detail; if they are
    unsure, have them ask what to strip.
 
-Do not call setup complete until the vault exists, `AGENTS.md` is written, the
-files are committed, and — if online backup was wanted — the commit is pushed
-and visible on the repository page.
+Do not call setup complete until the vault exists, `AGENTS.md` is written and
+the person has explicitly approved it, the files are committed, and — if
+online backup was wanted — the commit is pushed and visible on the repository
+page.
 
 ### If you are a chat assistant without file access
 
@@ -104,9 +110,10 @@ and make a deliberate decision before sharing employer or client material."
 
 Then give the person a compact, labeled summary called **my ARKS interview**.
 Tell them to install a file-capable agent using
-[`docs/01-setup-macos.md`](docs/01-setup-macos.md), open it in a separate empty
-folder, and paste the summary together with the same link that brought them to
-this `START-HERE.md`.
+[`docs/01-setup-macos.md`](docs/01-setup-macos.md) on a Mac or
+[`docs/02-setup-windows.md`](docs/02-setup-windows.md) on Windows, open it in a
+separate empty folder, and paste the summary together with the same link that
+brought them to this `START-HERE.md`.
 
 The conversation becomes the input.
 
