@@ -100,8 +100,8 @@ A scaffold is not a system until something real is living in it.
 | [`START-HERE.md`](START-HERE.md) | Written to your AI assistant — the target of the one-liner above |
 | [`template/`](template/) | A small worked reference vault to read and refer to — your agent copies it as your starting point, or builds yours from the interview |
 | [`examples/`](examples/) | One meeting followed end to end: the frozen record, the rewritten person note, the living project doc |
-| [`prompts/`](prompts/) | The interview/scaffold prompt, routines for capture and synthesis, and a health check your agent runs weekly |
-| [`docs/`](docs/) | Setup for non-technical humans, how finding things works, and optional power tools |
+| [`prompts/`](prompts/) | The interview/scaffold prompt, routines for capture, synthesis, and weekly review, a health check your agent runs weekly, and a recovery prompt for when something looks wrong |
+| [`docs/`](docs/) | Setup for non-technical humans (Mac and Windows), privacy in plain terms, how finding things works, optional power tools, and shared vaults |
 | [`GLOSSARY.md`](GLOSSARY.md) | Every term you'll hear in the first week, one line each |
 
 ## Where this sits
@@ -135,14 +135,17 @@ any committed version can be restored exactly. That habit makes your FILES
 recoverable — it cannot un-send a message or un-install something, so those
 still get a yes first. Git history also keeps everything — including anything
 sensitive you commit — so secrets never go in, and truly removing something
-later is a deliberate operation, not a delete.
+later is a deliberate operation, not a delete. When something does look wrong,
+[`prompts/04-recover.md`](prompts/04-recover.md) walks the agent through
+diagnosing before fixing.
 
 **Is my information private?** A private repository is access-controlled: it
 is visible to you, people you invite, and the service operating it; GitHub
 processes and stores it. Anything your agent reads also reaches your AI
 provider, so passwords, keys, and account numbers stay out — and sensitive
 material about other people deserves a real decision, not a default; it can
-live in a separate repo you open only when you need it.
+live in a separate repo you open only when you need it. The full threat
+model, in plain terms: [`docs/03-privacy.md`](docs/03-privacy.md).
 
 **How is this different from Notion or Obsidian?** Agents work natively on
 plain files; the history of committed files is exact; nothing is trapped in a

@@ -4,7 +4,7 @@
 to go stale — the method doesn't depend on any of it. Before adopting
 anything here, read the engine contract in [`SPEC.md`](../SPEC.md) §5.*
 
-## Search engines (Tier 1+, when [`02-search.md`](02-search.md) says so)
+## Search engines (Tier 1+, when [`04-search.md`](04-search.md) says so)
 
 - **kb** ([github.com/hraness/kb](https://github.com/hraness/kb), MIT) — a
   knowledge-base CLI whose philosophy closely matches ARKS: Markdown and git

@@ -39,7 +39,7 @@ engine must honor (read-only over your Markdown, disposable index, capture only
 into `Records/`). If you're comfortable installing a command-line tool, **kb**
 is the current recommendation for enhanced search. Its setup notes, caveats,
 and the other current known-good options live in
-[`03-power-tools.md`](03-power-tools.md).
+[`05-power-tools.md`](05-power-tools.md).
 
 Adding an engine changes nothing about the method. Removing one loses
 nothing but speed. The files remain the system.

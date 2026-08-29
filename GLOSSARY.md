@@ -25,3 +25,15 @@ Everything you'll hear in the first week, in one place.
 | **ADR** | A short note recording a decision and its rationale for future reference. |
 | **terminal / CLI** | A text interface where you run the agent and enter commands. |
 | **agent** | An AI that can take actions — read, write, and run commands — not only produce text. |
+| **capture** | File raw source material as a dated, write-once Record. |
+| **synthesis / synthesize** | Turn Records into current Knowledge, with human approval before writing it. |
+| **provenance** | The trace from a Knowledge note back to its source Records through the required `sources:` list. |
+| **invariant** | A load-bearing rule that every conforming ARKS vault must keep. |
+| **scaffold** | The initial folders and files built for a vault from the person's actual needs. |
+| **redaction** | Deliberate removal of sensitive, dangerous, or legally removable material; the privacy exception to write-once. |
+| **tombstone** | A one-line note left in a Record to mark that material was redacted. |
+| **graduation trigger** | The condition that justifies adding a piece of optional structure. |
+| **health check** | The weekly five-check audit that reports vault drift before fixing anything. |
+| **`.context/` / private layer** | The gitignored folder for per-person context and scratch space that is not shared vault infrastructure. |
+| **engine / index** | Optional search or capture tooling and the disposable lookup data it builds; authored files remain the source of truth. |
+| **OODA** | John Boyd's observe–orient–decide–act loop, mapped in ARKS to capture, synthesis, the human checkpoint, and Action. |
