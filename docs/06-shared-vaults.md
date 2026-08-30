@@ -9,9 +9,11 @@ that already trusts one another; these controls make that trust explicit.
 ## The mechanics are ordinary
 
 A shared vault is a private repository with invited collaborators. That is
-the whole model. Each person works in a local checkout, and the repository
-provider handles access and synchronization. There is no collaboration
-server, shared database, or new ARKS application to add.
+the whole model. Each person works in a local copy and uses git — usually
+through their agent — to pull others' commits and push their own. The
+repository provider hosts the repository and controls access; nothing
+synchronizes by itself. There is no collaboration server, shared database, or
+new ARKS application to add.
 
 Keep the repository private. Adding a collaborator or changing its visibility
 is an external action and needs the fresh, explicit approval that the reference
@@ -38,13 +40,15 @@ and make the proposed change concrete enough to approve or reject.
 For teams comfortable with them, pull requests are the natural form of this
 checkpoint: the proposed synthesis, its cited Records, the named reviewer,
 and the approval are visible together. Approval and merge make it shared
-Knowledge; a pull request is not permission to skip the checkpoint.
+Knowledge; a pull request is not permission to skip the checkpoint. Knowledge
+on an unmerged branch is a proposal, not shared Knowledge; approval and merge
+are the checkpoint.
 
 ## Give every living document one owner
 
 Each project still has exactly one living document. It should also have
 exactly one owner. Two people independently updating the same Action document
-produce merge conflicts and, worse, two answers to one status question.
+can produce merge conflicts and, worse, two answers to one status question.
 
 The owner maintains the current version and resolves proposed changes. Other
 collaborators can supply facts, comments, or diffs, but they propose rather
@@ -53,7 +57,7 @@ unambiguous.
 
 ## `.context/` stays personal
 
-Every collaborator keeps a personal `.context/` in their own checkout. A
+Every collaborator keeps a personal `.context/` in their own local copy. A
 shared vault therefore has several local `.context/` directories, not one
 team profile. All of them remain gitignored and none is committed.
 

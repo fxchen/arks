@@ -125,7 +125,10 @@ instructions concise and push detail into System/.
 
 RULES: Don't over-build — scaffold only what my answers justify; I can grow it
 later. Show me the proposed tree before creating files. Explain the why behind
-structural choices as you go.
+structural choices as you go. If I said the vault is shared, write the shared
+rules into AGENTS.md too: a named reviewer for Knowledge writes, AGENTS.md
+changed only by agreement, and one owner per living Action document (the
+fuller guidance is docs/06-shared-vaults.md at github.com/fxchen/arks).
 ```
 
 Then stop building and start using it: one real project, one routine, ten

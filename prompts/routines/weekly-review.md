@@ -11,11 +11,14 @@ it whole.
 Run a weekly review of this vault. Review and propose first; do not edit
 anything unless I approve the specific change.
 
-1. Run the vault's health-check routine first (System/routines/health-check.md
-   if this vault keeps one; if not, ask me for the checks). Follow
-   its read-only checks and approval rules. Summarize the result instead of
-   dumping command output: give each check its status, the finding that most
-   needs attention, and the unresolved-wikilink queue.
+1. Run the vault's health-check routine first if it keeps one at
+   System/routines/health-check.md, following its read-only checks and approval
+   rules. If it has no health-check routine, do a minimal read-only pass
+   directly: check that Knowledge notes cite existing Records and resolve
+   wikilinks into a queue. Say what was skipped and carry that queue into step
+   5. Summarize the result instead of dumping command output: give each check
+   its status, the finding that most needs attention, and the
+   unresolved-wikilink queue.
 
 2. Find Records that are not yet reflected in the Knowledge notes that should
    cite them. Compare what each Record says with the relevant Knowledge note's

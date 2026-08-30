@@ -13,6 +13,8 @@ ask the agent what to strip before you paste it.
 
 1. **Make a GitHub account and one private repository.** Name it after the
    thing you're building. Choose Private; no other setup is needed yet.
+   (No GitHub? Skip this step and the connection in step 3 — the vault works
+   locally; you just have no online backup until you add one.)
 
 2. **Install an agent.** Claude Code or Codex. Follow the official install
    instructions and copy-paste the command they give you. If something

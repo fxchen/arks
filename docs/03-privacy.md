@@ -19,13 +19,16 @@ A private repository reduces public exposure. It does not protect you if
 someone gains access to your GitHub account or computer, if you invite the
 wrong person, or if a tool with access reads the files. It also does not undo
 information that has already been copied, shared, or committed.
+Organization roles and connected services or apps can also grant access.
 
 ## What reaches your AI provider
 
-Everything your agent reads reaches the AI provider that runs it. That can
-include vault files, text pasted into chat, command output, and error messages.
-The privacy boundary follows what the agent reads, not only what you type into
-the chat window.
+Plan on everything your agent reads reaching the AI provider that runs it.
+Not every byte is transmitted for every task, but you cannot see which parts
+are, so the safe planning assumption is all of it. That can include vault
+files, text pasted into chat, command output, and error messages. The privacy
+boundary follows what the agent reads, not only what you type into the chat
+window.
 
 Retention and training practices vary by provider and by plan. Check the data
 settings and current terms for the account you use. Make that check before you
@@ -45,8 +48,9 @@ deliberate decision about whether it belongs in the vault at all.
 
 Passwords, access keys, account numbers, one-time codes, and similar secrets
 never go in any file. A `.gitignore` pattern tells git not to track selected
-files, which can help prevent accidents. It is not the defense. The defense is
-the habit of keeping secrets out before a file is created or pasted.
+files, which can help prevent accidents, but it does not protect files git
+already tracks. It is not the defense. The defense is the habit of keeping
+secrets out before a file is created or pasted.
 
 If a secret lands in a file anyway, rotate or revoke it first — replace it or
 disable it so the exposed value no longer works. Then redact it from the file.
@@ -68,6 +72,10 @@ it, and give the agent access only during that work.
 This pattern reduces routine exposure. It does not change who operates the
 repository or what reaches the AI provider when the agent reads it.
 
+A separate repository reduces accidental exposure but is not by itself a
+barrier: an agent with broad file access may still read it. The barrier is
+what you give the agent access to.
+
 ## Employer and client material
 
 Work material may be governed by an employment agreement, a client contract,
@@ -86,11 +94,14 @@ token, one-time code, long random string, or personal detail. The full
 redaction rule lives in the setup guides:
 [Mac](01-setup-macos.md) and [Windows](02-setup-windows.md).
 
-## Nothing leaves without a fresh yes
+## No new destination without a fresh yes
 
-Reading and organizing files inside the vault is different from sending them
-elsewhere. Sending, publishing, posting, sharing, connecting an account, or
-changing repository visibility requires your fresh explicit yes each time.
+Ordinary agent use already sends what the agent reads to the provider as
+described above. This rule governs additional destinations and actions:
+anything that leaves the vault or changes an external system — sending,
+publishing, posting, deleting remotely, installing, connecting an account, or
+changing repository sharing or visibility — requires your fresh explicit yes
+each time.
 
 That standing permission rule belongs in your vault's `AGENTS.md`. The
 [starter `AGENTS.md`](../template/AGENTS.md) includes the language to preserve

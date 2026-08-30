@@ -83,6 +83,10 @@ version with the exact words to say: [`prompts/01-first-afternoon.md`](prompts/0
 4. Put **five real things** in it. Not a system — content. Ugly is fine.
 5. Write the house rules together — or skip straight to the interview below.
 
+No GitHub? Steps 1 and 3 are the online-backup branch. Skip them and
+everything still works locally — you just have no offsite copy until you add
+one.
+
 **The better path:** don't design your structure; answer questions and let it
 be built around you. Paste [`prompts/02-build-my-vault.md`](prompts/02-build-my-vault.md)
 into a fresh agent session. It interviews you (2–3 questions at a time),
@@ -98,7 +102,7 @@ A scaffold is not a system until something real is living in it.
 |---|---|
 | [`SPEC.md`](SPEC.md) | The method, stated precisely: layers, invariants, conventions, and when to add structure |
 | [`START-HERE.md`](START-HERE.md) | Written to your AI assistant — the target of the one-liner above |
-| [`template/`](template/) | A small worked reference vault to read and refer to — your agent copies it as your starting point, or builds yours from the interview |
+| [`template/`](template/) | A small worked reference vault with fictional content, read and adapted piece by piece after the interview rather than copied wholesale |
 | [`examples/`](examples/) | One meeting followed end to end: the frozen record, the rewritten person note, the living project doc |
 | [`prompts/`](prompts/) | The interview/scaffold prompt, routines for capture, synthesis, and weekly review, a health check your agent runs weekly, and a recovery prompt for when something looks wrong |
 | [`docs/`](docs/) | Setup for non-technical humans (Mac and Windows), privacy in plain terms, how finding things works, optional power tools, and shared vaults |
@@ -113,6 +117,10 @@ folders, one-way flow, revision rules a machine can follow, and provenance,
 stated plainly enough to hand to an assistant.
 The ARKS loop follows John Boyd's OODA loop — observe, orient, decide, act —
 with orient made explicit as synthesis and a human checkpoint before acting.
+The way this repo is shared is borrowed with admiration from Ben Guo's **kb**
+([hraness/kb](https://github.com/hraness/kb)): kb installs as one terminal
+line and lets the tool carry the opinions. ARKS has no tool — so one line
+hands your assistant a file, and the file carries them.
 
 If you know **PARA**, the overlap is deliberate: PARA sorts work by
 actionability for a human filer, while ARKS also makes explicit what a machine
@@ -131,7 +139,9 @@ tools, and not locked to one vendor.
 is involved. Your contribution is judgment, not syntax.
 
 **What if the agent ruins something?** Commit before anything ambitious, and
-any committed version can be restored exactly. That habit makes your FILES
+any committed version can be restored exactly — for as long as the
+repository itself survives, which is what online backup is for. That habit
+makes your FILES
 recoverable — it cannot un-send a message or un-install something, so those
 still get a yes first. Git history also keeps everything — including anything
 sensitive you commit — so secrets never go in, and truly removing something
@@ -141,11 +151,11 @@ diagnosing before fixing.
 
 **Is my information private?** A private repository is access-controlled: it
 is visible to you, people you invite, and the service operating it; GitHub
-processes and stores it. Anything your agent reads also reaches your AI
+processes and stores it. Plan on anything your agent reads reaching your AI
 provider, so passwords, keys, and account numbers stay out — and sensitive
 material about other people deserves a real decision, not a default; it can
-live in a separate repo you open only when you need it. The full threat
-model, in plain terms: [`docs/03-privacy.md`](docs/03-privacy.md).
+live in a separate repo you open only when you need it. The fuller privacy
+guide, in plain terms: [`docs/03-privacy.md`](docs/03-privacy.md).
 
 **How is this different from Notion or Obsidian?** Agents work natively on
 plain files; the history of committed files is exact; nothing is trapped in a

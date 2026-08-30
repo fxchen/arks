@@ -93,7 +93,7 @@ later without being pointed at it.
 
   | Field | Form | Rule |
   |---|---|---|
-  | `updated:` | `YYYY-MM-DD` | Required real date. On a Record, this is its capture date and never changes after filing; outside Records, it is the date of last substantive revision |
+  | `updated:` | `YYYY-MM-DD` | Required real date. On a Record, it is the Record's date — the day the event happened or the material was received — matches the filename prefix, and never changes after filing; outside Records, it is the date of last substantive revision |
   | `tags:` | YAML list | Required |
   | `sources:` | YAML list of `Records/` file slugs | Required on Knowledge notes |
   | `source:` | Single free-text string | Optional on Records; says where the material came from, such as `phone call` |
@@ -112,15 +112,15 @@ later without being pointed at it.
   queue of what to write next. Alias syntax such as
   `[[jordan-at-acme|Jordan]]` resolves by the slug before the pipe. Do not
   suppress a link because its target does not exist yet. Wikilinks inside
-  inline code spans or fenced code blocks are syntax examples, not links;
-  resolution ignores them.
+  inline code (backticks) or code blocks — fenced or indented — are syntax
+  examples, not links; ignore them.
 - **Renames.** A rename changes a slug, so update every reference in the same
   change. Knowledge and Action slugs may be renamed when understanding of the
   name improves: rename the file and update its references. There is no alias
   registry; the display text in `[[slug|Display]]` is the only aliasing. A
   Record may be renamed only to correct a filing error — a wrong date prefix
-  or wrong slug. Its content stays untouched, and the correction is noted in
-  a one-line new Record, because renames are visible to the history check.
+  or wrong slug — with content identical, every reference updated in the same
+  change, and a one-line correction Record naming the old and new names.
 - **The private layer.** `.context/` is gitignored: `me.md` (who the vault's
   person is, for the agent's benefit) and scratch space. `System/` is durable
   shared infrastructure; `.context/` is private per-person state.
@@ -169,9 +169,12 @@ touching a single note. Current known-good options: `docs/05-power-tools.md`.
 A vault can be audited mechanically. `prompts/03-health-check.md` phrases these
 as paste-ready instructions to your agent (the reference vault keeps its own
 copy at `template/System/routines/health-check.md`); any tool may implement
-them against this list. These checks test
+them against this list. These checks test the mechanically auditable subset of
 the rules housed in §§2–3; they do not create another home for them. A layer
 that has not yet materialized has no files to check.
+
+Before the numbered checks, confirm that a root `AGENTS.md` exists. A vault
+without one fails invariant 3 outright.
 
 Accepted exceptions live at `System/routines/accepted-exceptions.md`, which
 must have normal frontmatter. Every entry contains a date, file, check number,
@@ -179,23 +182,30 @@ one-line reason, "approved by <the human>," and optionally a review date. An
 exception binds to one file and one check; it can never be a blanket.
 
 1. **Write-once Records:** run
-   `git log --name-only --diff-filter=MDR -- Records/`. If the repository has
-   no commits yet, report this history check as not applicable. Otherwise, M
-   is a violation unless it is an accepted privacy redaction. Every D or R
-   must be explained: deletion is legitimate only as a privacy redaction. An
-   R is legitimate only as a filing-error correction with references updated
-   (check 3 confirms) or as an accepted exception; otherwise it is a
-   violation. Also run `git status --porcelain Records/` for uncommitted M
-   entries on tracked Records. Untracked new Records are fine.
+   `git log --name-status -M --diff-filter=MDR -- Records/`. If the repository
+   has no commits yet, report this history check as not applicable. Otherwise,
+   M is a violation unless it is an accepted privacy redaction. Every D or R
+   must be explained: deletion is legitimate only as a privacy redaction. A
+   Record rename is conforming only when it corrects a filing error — a wrong
+   date prefix or wrong slug — the content is identical (git shows a pure
+   rename), every reference was updated in the same change, and a dated
+   one-line correction Record names the old and new names. A conforming rename
+   needs no accepted-exceptions entry. Any other Record rename is a violation;
+   an accepted-exceptions entry may acknowledge one to stop repeat reporting,
+   but does not make it conforming. Also run
+   `git status --porcelain Records/` for uncommitted changes to tracked Records:
+   M, D, or R in either column. Untracked new Records are fine.
 2. **Provenance:** every Knowledge note has a nonempty `sources:` YAML
-   frontmatter list naming `Records/` file slugs. Prose and inline citations
-   are not alternatives.
+   frontmatter list naming `Records/` file slugs. Each entry must match exactly
+   one existing file under `Records/`; an entry matching no existing Record is
+   a violation. Prose and inline citations are not alternatives.
 3. **Links:** resolve each `[[wikilink]]` by recursively matching its slug
    against Markdown filename slugs across the vault, excluding
    `System/templates/` and `.context/`. One match resolves, multiple matches
    violate, and zero matches are reported as a healthy queue. For
-   `[[slug|Display Text]]`, match `slug`. Wikilinks inside inline code spans or
-   fenced code blocks are syntax examples, not links; resolution ignores them.
+   `[[slug|Display Text]]`, match `slug`. Wikilinks inside inline code
+   (backticks) or code blocks — fenced or indented — are syntax examples, not
+   links; ignore them.
 4. **Frontmatter:** check Markdown content files in exactly `Records/`,
    `Knowledge/`, `Action/`, `System/decisions/`, and `System/routines/` for
    `updated:` and `tags:` in the forms §3 defines; `updated:` must be a real
@@ -206,12 +216,14 @@ exception binds to one file and one check; it can never be a blanket.
    lowercase-hyphenated and contains no spaces. Dotfiles and non-Markdown
    assets are out of scope; exclude `.context/` and the seven named files in
    §3. Every Record and every dated review file in `Action/` has a
-   `YYYY-MM-DD-` prefix; Knowledge notes and living Action documents do not.
+   `YYYY-MM-DD-` prefix, and every Record's `updated:` value equals its
+   filename date prefix; Knowledge notes and living Action documents do not.
 
 A clean check is necessary, not sufficient. It cannot verify that `AGENTS.md`
 was actually loaded, that citations genuinely support the claims built on
-them, or that required human approvals happened. Run the check weekly; the
-reference `AGENTS.md` in `template/` already asks your agent to do so.
+them, that every rule keeps one home, that links appear on first mention, or
+that required human approvals happened. Run the check weekly; the reference
+`AGENTS.md` in `template/` already asks your agent to do so.
 
 ---
 

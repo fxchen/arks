@@ -24,19 +24,23 @@ invite, and the service operating it; GitHub processes and stores it.
 Claude Code (Anthropic) or Codex (OpenAI). If you already pay for one, use it;
 the choice matters far less than starting.
 
-1. Open the **Start menu**, type `windows terminal`, and press enter. You can
-   also open **PowerShell**. A plain text window appears. For everything we
-   do, it's just a text box where you type sentences and read replies.
-2. In your browser, go directly to the official installation source: Claude
+1. Open the **Start menu**, type `powershell`, and press enter (or open
+   Windows Terminal and choose its PowerShell profile — the prompt should
+   begin `PS`). A plain text window appears. Once your agent is running, it's
+   just a text box where you type sentences and read replies.
+2. Windows doesn't come with git, which your agent needs for version history.
+   Install it from the official source: [git-scm.com](https://git-scm.com)
+   — download, run the installer, accept the defaults, then close and reopen
+   PowerShell.
+3. In your browser, go directly to the official installation source: Claude
    Code at [code.claude.com/docs](https://code.claude.com/docs/en/setup), or
    Codex at [github.com/openai/codex](https://github.com/openai/codex). Type
    the address yourself rather than clicking search results, then copy-paste
-   the official install command into the Windows Terminal or PowerShell
-   window. Press enter.
-3. If anything errors, use the escape hatch — but apply the redaction rule
+   the official install command into the PowerShell window. Press enter.
+4. If anything errors, use the escape hatch — but apply the redaction rule
    above before pasting it into chat.
 
-The first run will ask you to sign in to your AI account in a browser. That is
+The first run will usually ask you to sign in to your AI account in a browser. That is
 normal, as are errors — apply the redaction rule above before pasting them into
 chat. This path is newer and less traveled than the Mac one, so the escape
 hatch matters more here.
@@ -44,7 +48,7 @@ hatch matters more here.
 ## 3. Introduce them, and hand over the rest
 
 1. Make an empty folder wherever you keep things (Desktop is fine).
-2. In Windows Terminal or PowerShell, type `cd ` (with the space), **drag the
+2. In PowerShell, type `cd ` (with the space), **drag the
    folder onto the window** (this pastes its full location and avoids typing
    the path), press enter.
 3. Start the agent by typing its name: `claude` (or `codex`). Say hello.

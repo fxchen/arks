@@ -79,17 +79,20 @@ finish that tidying before it is filed.
 Show me before doing: **any write to `Knowledge/` (invariant).** Propose the
 change and wait for my yes. Also show me before any deletion; any rename or
 frontmatter change to an existing file (for filed Records, approval permits
-only the privacy exception: removing sensitive or leaked material is always
-allowed; note the redaction, remember that git history keeps what the working
-tree deletes, and rotate any leaked secret); any Action change flagged by the
-synthesize routine; or anything that leaves the vault or changes an external
-system, including sending, publishing, posting, deleting remotely, installing,
-connecting accounts, or changing repository sharing or visibility. Get my
-fresh explicit yes each time.
+the privacy exception for content: removing sensitive or leaked material is
+always allowed; note the redaction, remember that git history keeps what the
+working tree deletes, and rotate any leaked secret. A rename is approvable only
+to correct a wrong date prefix or slug, with content unchanged, references
+updated in the same change, and a one-line correction Record); any Action
+change flagged by the synthesize routine; or anything that leaves the vault or
+changes an external system, including sending, publishing, posting, deleting
+remotely, installing, connecting accounts, or changing repository sharing or
+visibility. Get my fresh explicit yes each time.
 
-Never, outside the privacy exception just described: edit, rename, or
-otherwise alter a filed Record. Never put passwords, keys, or account numbers
-in any file, or mention one client's material in another client's work.
+Never alter a filed Record's content outside the privacy exception just
+described, or rename one except for the approved filing-error correction just
+described. Never put passwords, keys, or account numbers in any file, or
+mention one client's material in another client's work.
 
 ## Routines
 
